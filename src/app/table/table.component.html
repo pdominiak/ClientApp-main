@@ -1,0 +1,41 @@
+
+<div class="container">
+  <h3 style="text-align: center;font-size:2em;font-weight:200;">Lista kontaktów</h3>
+ 
+  <table class="table table-striped table-hover" style="width: 80%; min-width:80%; max-width: 80%;margin-left:auto;margin-right:auto;">
+    <thead class="table-dark">
+      <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Email</th>
+        <th>Nr telefonu</th>
+        <th>TODO</th>
+        <th>TODO</th>
+        <th>TODO</th>
+        <th>TODO</th>
+      </tr>
+    </thead>
+    <tbody id="Contacts">
+
+      <tr *ngFor="let Contact of contacts | paginate: {itemsPerPage: count, currentPage:p}">
+        <td>{{Contact.firstName}}</td>
+        <td>{{Contact.lastName}}</td>
+        <td>{{Contact.email}}</td>
+        <td>{{Contact.phoneNumber}}</td>
+        <td><button class="btn btn-primary" (click)="myClickFunAdd(Contact)">Dodaj adres</button></td>
+        <td><button class="btn btn-success" (click)="myClickFunShow(Contact)">Pokaż adresy</button></td>
+        <td><button class="btn btn-danger" (click)="myClickFunHide(Contact)">Ukryj adresy</button></td>
+        <td><button class="btn btn-danger" (click)="delete(Contact)">Usuń kontakt</button></td>
+      </tr>
+    </tbody>
+  </table>
+ 
+</div>
+<div>
+  <span>
+    <a href="/addcontact" class="btn btn-success text-left">Dodaj kontakt</a>
+  </span>
+  <span class="text-right">
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+  </span>
+</div>

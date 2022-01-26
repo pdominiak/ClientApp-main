@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9750c8ef-b888-4ff1-8cbc-54b27839a3da/resourceGroups/PawelDominiak/providers/Microsoft.Web/sites/pd-angular",
+    "appService.deploySubpath": "dist"
+}

@@ -1,0 +1,59 @@
+  <div class="container">
+    
+
+    <div class="form-bg">
+      <form #addressForm="ngForm" (submit)="addAddress(addressForm)">
+        <div class="panel btn-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Wprowadź dane adresowe dla użytkownika o emailu: {{contact.email}}</h3>
+          </div>
+
+
+          <div class="form-group">
+            <label for="street">Ulica:</label>
+            <input id="street" type="text" class="form-control"
+                   name="street"  ngModel>
+          </div>
+
+          
+
+          <div class="form-group">
+            <label for="housenumber">Numer domu:</label>
+            <input id="housenumber" type="text" class="form-control"
+                   name="housenumber" ngModel>
+          </div>
+
+          <div class="form-group">
+            <label for="flatnumber">Numer mieszkania:</label>
+            <input id="flatnumber" type="text" class="form-control"
+                   name="flatnumber" ngModel>
+          </div>
+
+          <div class="form-group">
+            <label for="postofficecode">Kod pocztowy:</label>
+            <input id="postofficecode" type="text" class="form-control"
+                   name="postofficecode" ngModel>
+          </div>
+
+          <div class="form-group">
+            <label for="town">Miasto:</label>
+            <input id="town" type="text" class="form-control"
+                   name="town" ngModel>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Kraj:</label>
+            <input id="country" type="text" class="form-control"
+                   name="country" ngModel>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-primary" type="submit">Dodaj adres</button>
+        </div>
+      </form>
+
+    </div>
+   
+  </div>
+
+

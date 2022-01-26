@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="form-bg">
+    <form #contactForm="ngForm" (submit)="addContact(contactForm)">
+      <div class="panel btn-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Wprowadź dane kontaktowe</h3>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Imię:</label>
+        <input required id="firstname" type="text" class="form-control"
+               name="firstname" ngModel >
+        
+      </div>
+    
+        <div class="form-group">
+          <label for="lastname">Nazwisko:</label>
+          <input required id="lastname" type="text" class="form-control"
+                 name="lastname"  ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input required id="email" type="text" class="form-control"
+                 name="email"  ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="phonenumber">Numer telefonu:</label>
+          <input required id="phonenumber" type="text" class="form-control"
+                 name="phonenumber"  ngModel>
+        </div>
+      
+        <div class="panel-footer">
+          <button class="btn btn-primary" type="submit">Dodaj kontakt</button>
+        </div>
+
+
+    </form>
+  </div>
+</div>
+
